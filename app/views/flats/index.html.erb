@@ -1,0 +1,17 @@
+<h1>Flats</h1>
+
+<ul>
+  <% @flats.each do |flat|  %>
+    <li>
+      <h2>
+        <%= flat['name'] %>
+      </h2>
+      <p>
+        <%= flat['price'] %> <%= flat['priceCurrency'] %>
+      </p>
+      <%=
+        image_tag flat['imageUrl'], style: 'height:100px;width:100px;'
+      %>
+    </li>
+  <% end %>
+</ul>
